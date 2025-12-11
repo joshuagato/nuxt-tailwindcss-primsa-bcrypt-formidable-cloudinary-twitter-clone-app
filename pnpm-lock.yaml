@@ -30,6 +30,9 @@ importers:
       '@nuxtjs/tailwindcss':
         specifier: 5.1.2
         version: 5.1.2(magicast@0.5.1)(webpack@5.103.0)(yaml@2.8.2)
+      prisma:
+        specifier: 3.14.0
+        version: 3.14.0
 
 packages:
 
@@ -1024,6 +1027,9 @@ packages:
 
   '@poppinss/exception@1.2.2':
     resolution: {integrity: sha512-m7bpKCD4QMlFCjA/nKTs23fuvoVFoA83brRKmObCUNmi/9tVu8Ve3w4YQAnJu4q3Tjf5fr685HYIC/IA2zHRSg==}
+
+  '@prisma/engines@3.14.0-36.2b0c12756921c891fec4f68d9444e18c7d5d4a6a':
+    resolution: {integrity: sha512-LwZvI3FY6f43xFjQNRuE10JM5R8vJzFTSmbV9X0Wuhv9kscLkjRlZt0BEoiHmO+2HA3B3xxbMfB5du7ZoSFXGg==}
 
   '@rolldown/pluginutils@1.0.0-beta.50':
     resolution: {integrity: sha512-5e76wQiQVeL1ICOZVUg4LSOVYg9jyhGCin+icYozhsUzM+fHE7kddi1bdiE0jwVqTfkjba3jUFbEkoC9WkdvyA==}
@@ -3273,6 +3279,11 @@ packages:
     resolution: {integrity: sha512-nODzvTiYVRGRqAOvE84Vk5JDPyyxsVk0/fbA/bq7RqlnhksGpset09XTxbpvLTIjoaF7K8Z8DG8yHtKGTPSYRw==}
     engines: {node: '>=20'}
 
+  prisma@3.14.0:
+    resolution: {integrity: sha512-l9MOgNCn/paDE+i1K2fp9NZ+Du4trzPTJsGkaQHVBufTGqzoYHuNk8JfzXuIn0Gte6/ZjyKj652Jq/Lc1tp2yw==}
+    engines: {node: '>=12.6'}
+    hasBin: true
+
   process-nextick-args@2.0.1:
     resolution: {integrity: sha512-3ouUOpQhtgrbOa17J7+uxOTpITYWaGP7/AhoR3+A+/1e9skrzelGi/dXzEYyvbxubEF6Wn2ypscTKiKJFFn1ag==}
 
@@ -5140,6 +5151,8 @@ snapshots:
       supports-color: 10.2.2
 
   '@poppinss/exception@1.2.2': {}
+
+  '@prisma/engines@3.14.0-36.2b0c12756921c891fec4f68d9444e18c7d5d4a6a': {}
 
   '@rolldown/pluginutils@1.0.0-beta.50': {}
 
@@ -7638,6 +7651,10 @@ snapshots:
       source-map-js: 1.2.1
 
   pretty-bytes@7.1.0: {}
+
+  prisma@3.14.0:
+    dependencies:
+      '@prisma/engines': 3.14.0-36.2b0c12756921c891fec4f68d9444e18c7d5d4a6a
 
   process-nextick-args@2.0.1: {}
 
