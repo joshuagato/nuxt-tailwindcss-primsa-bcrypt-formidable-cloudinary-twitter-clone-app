@@ -19,6 +19,6 @@
   },
   "devDependencies": {
     "@nuxtjs/tailwindcss": "5.1.2",
-    "prisma": "3.14.0"
+    "prisma": "7.1.0"
   }
 }
