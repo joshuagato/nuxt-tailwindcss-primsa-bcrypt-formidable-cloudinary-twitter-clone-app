@@ -20,6 +20,8 @@
         "vue-router": "^4.6.3"
     },
     "devDependencies": {
-        "@nuxtjs/tailwindcss": "5.1.2"
+        "@nuxtjs/tailwindcss": "5.1.2",
+        "@types/node": "^25.0.0",
+        "prisma": "~6.19.1"
     }
 }
