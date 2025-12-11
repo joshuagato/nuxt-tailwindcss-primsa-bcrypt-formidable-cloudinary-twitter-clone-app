@@ -1,5 +1,9 @@
-import { sendError, readBody } from "h3";
-import { createUser } from "../../db/users.js";
+import { sendError, createError, readBody } from "h3";
+import {
+    createUser,
+    getUserByEmail,
+    getUserByUsername,
+} from "../../db/users.js";
 import { userTransformer } from "~~/server/transformers/user.js";
 
 export default defineEventHandler(async (event) => {
@@ -22,6 +26,24 @@ export default defineEventHandler(async (event) => {
                 statusMessage: "Passwords do not match",
             })
         );
+    }
+
+    let existingUser;
+
+    existingUser = await getUserByEmail(email);
+    if (existingUser) {
+        throw createError({
+            statusCode: 401,
+            statusMessage: "User with provided email already exists",
+        });
+    }
+
+    existingUser = await getUserByUsername(username);
+    if (existingUser) {
+        throw createError({
+            statusCode: 401,
+            statusMessage: "User with provided username already exists",
+        });
     }
 
     const userData = {
