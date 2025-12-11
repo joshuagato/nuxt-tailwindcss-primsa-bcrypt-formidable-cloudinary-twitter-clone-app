@@ -18,6 +18,7 @@
         "cloudinary": "1.30.0",
         "dotenv": "^17.2.3",
         "formidable": "2.0.1",
+        "h3": "1.15.4",
         "human-time": "0.0.2",
         "jsonwebtoken": "8.5.1",
         "jwt-decode": "3.1.2",

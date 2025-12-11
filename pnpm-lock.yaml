@@ -32,6 +32,9 @@ importers:
       formidable:
         specifier: 2.0.1
         version: 2.0.1
+      h3:
+        specifier: 1.15.4
+        version: 1.15.4
       human-time:
         specifier: 0.0.2
         version: 0.0.2
