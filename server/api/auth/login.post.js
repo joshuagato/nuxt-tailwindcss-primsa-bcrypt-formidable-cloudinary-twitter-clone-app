@@ -1,3 +1,4 @@
+import { readBody } from "h3";
 import { getUserByUsername } from "../../db/users.js";
 import bcrypt from "bcrypt";
 import { generateTokens, sendRefreshToken } from "../../utils/jwt.js";
@@ -6,7 +7,7 @@ import { createRefreshToken } from "../../db/refreshTokens.js";
 import { sendError } from "h3";
 
 export default defineEventHandler(async (event) => {
-    const body = await useBody(event);
+    const body = await readBody(event);
 
     const { username, password } = body;
 
