@@ -17,7 +17,7 @@
         "bcrypt": "6.0.0",
         "cloudinary": "1.30.0",
         "dotenv": "^17.2.3",
-        "formidable": "2.0.1",
+        "formidable": "^3.5.4",
         "h3": "1.15.4",
         "human-time": "0.0.2",
         "jsonwebtoken": "8.5.1",
