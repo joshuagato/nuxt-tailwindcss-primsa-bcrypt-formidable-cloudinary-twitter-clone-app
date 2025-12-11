@@ -41,6 +41,27 @@ export default () => {
         });
     };
 
+    const register = ({ name, email, username, password, repeatPassword }) => {
+        return new Promise(async (resolve, reject) => {
+            try {
+                const data = await $fetch("/api/auth/register", {
+                    method: "POST",
+                    body: {
+                        name,
+                        email,
+                        username,
+                        password,
+                        repeatPassword,
+                    },
+                });
+
+                if (data) resolve("User registered successfully!");
+            } catch (error) {
+                reject(error.statusMessage);
+            }
+        });
+    };
+
     const refreshToken = () => {
         return new Promise(async (resolve, reject) => {
             try {
@@ -121,6 +142,7 @@ export default () => {
 
     return {
         login,
+        register,
         useAuthUser,
         useAuthToken,
         initAuth,
