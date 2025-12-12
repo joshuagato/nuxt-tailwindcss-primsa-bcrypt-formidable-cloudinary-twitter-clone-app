@@ -120,7 +120,7 @@ async function handleLogin() {
             password: data.password,
         });
     } catch (error) {
-        console.log(error);
+        errorMessage.value = error.statusMessage;
     } finally {
         data.loading = false;
     }
