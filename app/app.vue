@@ -1,6 +1,10 @@
 <template>
     <div :class="{ dark: darkMode }">
         <div class="bg-white dark:bg-dim-900">
+            <Head>
+                <Title>Twitter Clone</Title>
+            </Head>
+
             <LoadingPage v-if="isAuthLoading" />
 
             <!-- App -->
