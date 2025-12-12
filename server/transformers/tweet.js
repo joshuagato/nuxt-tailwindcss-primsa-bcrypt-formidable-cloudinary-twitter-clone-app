@@ -3,9 +3,11 @@ import { userTransformer } from "./user";
 import human from "human-time";
 
 export const tweetTransformer = (tweet) => {
+    const { id, text } = tweet;
+
     return {
-        id: tweet.id,
-        text: tweet.text,
+        id,
+        text,
         mediaFiles: !!tweet.mediaFiles
             ? tweet.mediaFiles.map(mediaFileTransformer)
             : [],

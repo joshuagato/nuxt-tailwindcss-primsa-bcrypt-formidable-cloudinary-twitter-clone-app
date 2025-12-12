@@ -1,10 +1,12 @@
 export const userTransformer = (user) => {
+    const { id, name, email, username, profileImage } = user;
+
     return {
-        id: user.id,
-        name: user.name,
-        email: user.email,
-        username: user.username,
-        profileImage: user.profileImage,
+        id,
+        name,
+        email,
+        username,
+        profileImage,
         handle: "@" + user.username,
     };
 };
