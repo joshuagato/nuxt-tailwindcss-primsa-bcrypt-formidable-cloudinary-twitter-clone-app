@@ -21,20 +21,22 @@ export default defineEventHandler(async (event) => {
     const userId = event.context?.auth?.user?.id;
 
     const tweetData = {
-        text: fields.text,
+        text: fields.text.shift(),
         authorId: userId,
     };
 
     const replyTo = fields.replyTo;
 
-    if (replyTo && replyTo !== "null" && replyTo !== "undefined") {
+    if (replyTo && replyTo.shift() !== null && replyTo.shift() !== undefined)
         tweetData.replyToId = replyTo;
-    }
+    else tweetData.replyToId = null;
 
     const tweet = await createTweet(tweetData);
 
     const filePromises = Object.keys(files).map(async (key) => {
-        const file = files[key];
+        const fileArray = files[key];
+
+        const file = Array.isArray(fileArray) ? fileArray[0] : fileArray;
 
         const cloudinaryResource = await uploadToCloudinary(file.filepath);
 
