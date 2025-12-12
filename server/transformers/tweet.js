@@ -3,18 +3,16 @@ import { userTransformer } from "./user";
 import human from "human-time";
 
 export const tweetTransformer = (tweet) => {
-    const { id, text } = tweet;
+    const { id, text, mediaFiles, author, replies, replyTo, createdAt } = tweet;
 
     return {
         id,
         text,
-        mediaFiles: !!tweet.mediaFiles
-            ? tweet.mediaFiles.map(mediaFileTransformer)
-            : [],
-        author: !!tweet.author ? userTransformer(tweet.author) : null,
-        replies: !!tweet.replies ? tweet.replies.map(tweetTransformer) : [],
-        replyTo: !!tweet.replyTo ? tweetTransformer(tweet.replyTo) : null,
-        repliesCount: !!tweet.replies ? tweet.replies.length : 0,
-        postedAtHuman: human(tweet.createdAt),
+        mediaFiles: !!mediaFiles ? mediaFiles.map(mediaFileTransformer) : [],
+        author: !!author ? userTransformer(author) : null,
+        replies: !!replies ? replies.map(tweetTransformer) : [],
+        replyTo: !!replyTo ? tweetTransformer(replyTo) : null,
+        repliesCount: !!replies ? replies.length : 0,
+        postedAtHuman: human(createdAt),
     };
 };
