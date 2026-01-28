@@ -1,3 +1,4 @@
+import { defineNuxtConfig } from "nuxt/config";
 import tailwindConfig from "./tailwind.config";
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
