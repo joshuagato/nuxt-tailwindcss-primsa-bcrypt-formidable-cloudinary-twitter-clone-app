@@ -23,7 +23,7 @@ const config: runtime.GetPrismaClientConfig = {
       "value": "prisma-client"
     },
     "output": {
-      "value": "/home/joshua/Documents/PORTFOLIO/nuxt-twitter-clone-app/app/generated/prisma",
+      "value": "/home/joshua/Documents/ELIMELLABS/FINAL PORT NUXT/nuxt-tailwindcss-primsa-bcrypt-formidable-cloudinary-twitter-clone-app/app/generated/prisma",
       "fromEnvVar": null
     },
     "config": {
@@ -37,7 +37,7 @@ const config: runtime.GetPrismaClientConfig = {
       }
     ],
     "previewFeatures": [],
-    "sourceFilePath": "/home/joshua/Documents/PORTFOLIO/nuxt-twitter-clone-app/prisma/schema.prisma",
+    "sourceFilePath": "/home/joshua/Documents/ELIMELLABS/FINAL PORT NUXT/nuxt-tailwindcss-primsa-bcrypt-formidable-cloudinary-twitter-clone-app/prisma/schema.prisma",
     "isCustomOutput": true
   },
   "relativePath": "../../../prisma",
@@ -47,6 +47,7 @@ const config: runtime.GetPrismaClientConfig = {
     "db"
   ],
   "activeProvider": "mongodb",
+  "postinstall": false,
   "inlineDatasources": {
     "db": {
       "url": {
