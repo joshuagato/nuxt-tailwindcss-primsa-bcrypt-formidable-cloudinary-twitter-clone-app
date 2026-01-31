@@ -5,9 +5,7 @@
     "scripts": {
         "build": "nuxt build",
         "dev": "nuxt dev",
-        "generate": "nuxt generate",
-        "preview": "nuxt preview",
-        "postinstall": "nuxt prepare"
+        "preview": "nuxt preview"
     },
     "dependencies": {
         "@headlessui/vue": "1.6.5",
